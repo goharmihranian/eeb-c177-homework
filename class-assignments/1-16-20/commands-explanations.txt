@@ -1,0 +1,115 @@
+Initially, I downloaded the zip file and extracted its contents
+Then I moved the file by using "mv ~/Downloads/data-shell/ ~/Developer/repos/eeb-c177-homework/class-assignments/'
+After, I moved into this directory to check if it was there by using 'cd ~/Developer/repos/eeb-c177-homework/class-assignments'
+I then did 'ls' to see if the data-shell contents were in the folder (they were).
+
+Following the directions on the website:
+
+'mkdir thesis'
+'ls' to ensure "thesis" was made (it was)
+'cd thesis' to move into the thesis folder
+'nano draft.txt' to open a file named "draft.txt" 
+I typed a few lines then did 'Ctrl-O' and pressed enter to save the text file
+Followed by 'Ctrl-X' to exit the editor
+'ls' to see if the "draft.txt" file had indeed saved to the thesis folder (it had)
+
+'touch my_file.txt' created a new file without opening it 
+'ls -l' showed me the 2 files I had made, along with their sizes
+my_file.txt was 0 bytes since it had no data in it
+'cd ..' to return to the data-shell contents
+
+In order to change the name of the "draft.txt" file:
+'mv thesis/draft.txt thesis/quotes.txt'
+'ls thesis' to make sure it worked (it had): the file is now named "quotes.txt"
+'mv thesis/quotes.txt .' was used to move "quotes.txt into the current working directory
+'ls thesis' showed that the only file in the "thesis" folder was the "my_file.txt" we had generated earlier
+'ls quotes.txt' showed that the "quotes.txt" was still in our current directory
+
+Moving Files to a New Folder:
+For this portion of the assignment, we don't have these folders so I am going to go through the commands as if we 
+had these folders
+'ls -F' showed that she had an "analyzed" folder and a "raw" folder 
+'ls -F analyzed' showed the contents in the analyzed folder
+she wants to move 2 files (sucrose.dat and maltose.dat) from the analyzed folder to the raw folder
+'mv sucrose.dat maltose.dat ../raw' would move them from the current directory into the raw directory
+
+Copying files and Directories
+'cp quotes.txt thesis/quotations.txt' copied this
+'ls quotes.txt thesis/quotations.txt' showed that it copied successfully
+
+
+'cp -r thesis thesis_backup' copied the thesis file and made a new identical file called thesis_backup
+'ls thesis thesis_backup' showed that both thesis and thesis_backup had the quotations.txt file within them
+
+Renaming Files
+'touch statstics.txt' to create misspelled file
+'mv statstics.txt statistics.txt' to rename the file
+'ls' to make sure the correctly spelled file was in the directory
+
+Moving and Copying
+'cd data' to move into the data folder
+'touch proteins.dat' to create such a file
+'mkdir recombine' to make a folder called recombine in the data folder (currently recombine and proteins.dat exist in the data folder)
+'mv proteins.dat recombine/' to move proteins.dat into the recombine folder
+'cp recombine/proteins.dat ../proteins-saved.dat' copied the proteins.dat as proteins-saved.dat into the class-assignments folder because that's the directory above data
+'ls' only showed the recombine folder within the data folder
+'cd ..' followed by 'ls' showed the proteins-saved.dat file in the class-assignments folder
+
+Removing Files and Directories
+'rm quotes.txt' deleted the file
+'ls quotes.txt' showed that quotes.txt doesn't exist since it was deleted
+
+'rm -i thesis_backup/quotations.txt' allows for a confirmation each time you delete something (reply with y or n for yes or no)
+this is good so that you don't accidentally erase something, since it cannot be retrieved
+
+'rm thesis' would delete thesis except rm by itself can't delete directories
+'rm -r thesis' however would remove a directory
+'rm -r -i thesis' would ask for confirmation, which is a good idea when deleting a directory
+
+Operations With Multiple Files and Directories
+'cd data' moves us into the data folder
+'mkdir backup' creates a folder named backup within the data folder
+'cp amino-acids.txt animals.txt backup/' copies the files (amino-acids.txt and animals.txt) into the backup folder
+'ls -F' shows the files in the data folder, which contains our backup folder we just made that contains the copies of the files
+
+'cp amino-acids.txt animals.txt morse.txt' gives an error message because you must copy files into a directory, which needs to be the last command you type (following what you're trying to copy)
+
+Using Wildcards for Accessing Multiple Files at Once
+'ls *t??ne.pdb' would give ethane.pdb and methane.pdb because the * tells us that there could be zero or more letters before the t and then the two ?? tells us that there must be two characters between the t and ne.pdb
+
+More on Wildcards
+'cp *calibration.txt backup/calibration'this copied all files ending in "-calibration.txt" to her backup folder
+'cp 2015-11-* send_to_bob/all_november_files/' this sent bob all of her november files
+'cp *-23-dataset* send_to_bob/all_datasets_created_on_a_23rd/' and this sent bob all of her datasets created on a 23rd
+
+Organizing DIrectories and FIles
+In order to do these steps, I did the following:
+
+'mkdir organzing' in class-assigments
+'cd organizing'
+'mkdir analyzed'
+'mkdir raw'
+'mkdir fructose.dat'
+'mkdir sucrose.dat'
+'ls' to make sure all of the files I just made were present
+
+In order to put fructose.dat and sucrose.dat into her analyzed folder:
+'mv *.dat analyzed' moved the files that ended in ".dat' to the analyzed folder
+'ls' showed that only the analyzed and raw folders exist
+'cd analyzed' followed by 'ls' to check if the files had transfered into analyzed folder
+
+Reproduce A Folder Structure
+'mkdir 2016-05-20' would create such a folder
+'mkdir 2016-05-20/data' would create a data folder within the 2016-05-20 folder
+'mkdir 2016-05-20/data/processed' would create a processed folder within the other two previously mentioned folders
+'mkdir 2016-05-20/data/raw' would create another folder named raw within the data folder
+
+OR you can do
+
+'mkdir 2016-05-20' which will make this folder
+'cd 2016-05-20' which will put you inside this folder
+'mkdir data' would make a data folder within the 2016-05-20 folder
+'cd data' would put you insdie the data folder
+'mkdir raw processed' would make two separate folders named raw and processed, respectively in the data folder
+
+
