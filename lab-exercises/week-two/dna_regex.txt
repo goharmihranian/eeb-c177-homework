@@ -1,0 +1,7 @@
+2.1 DNA SEQUENCE
+DONE ON REGEXR.COM
+
+1) /?c{2,5}
+2) ct[act]
+
+

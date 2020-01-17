@@ -1,0 +1,6 @@
+2.2 Searching Through Text
+
+1) \b[Ss][a-z]*\b
+2) \b[A-Za-z]*\.
+3) \b[A-Za-z]*[^\.]\b
+4) 
