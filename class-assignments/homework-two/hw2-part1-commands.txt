@@ -1,0 +1,27 @@
+1)
+cd ~/Developer/repos/CSB/unix/sandbox
+wget -c http://dev.shawntylerschwartz.com/docs/paragraphs.txt
+2)
+cd ~/Developer/repos/eeb-c177-homework/class-assignments
+mkdir homework-two
+cd homework-two
+mv ~/Developer/repos/CSB/unix/sandbox/paragraphs.txt .
+git add -A
+git commit -m "moved paragrpah.txt file to homework-two directory"
+git push origin master
+[input username and password]
+3)
+[already in /class-assignments/homework-two]
+mv paragraphs.txt easy-question.txt
+git add -A
+git commit -m "renamed paragraphs.txt to easy-question.txt"
+git push origin master
+[input username and password]
+4)
+mkdir hw2-part1-commands.txt
+git add -A
+git commit -m "added used commands to hw2-part1-commands.txt"
+git push origin master
+[input username and password]
+
+
