@@ -1,0 +1,29 @@
+1) cd ~/Developer/repos/CSB/unix/data
+   ls | wc -l
+   ls | wc -l > pipe-data-lines.txt
+2) cd miRNA
+   cat *a_miR.fasta | wc -m > fasta-cat.txt
+   git add -A
+   git commit -m "completed 1 and 2 for part 3"
+   git push origin master 
+(I had to move these from the CSB repo into my own since it wouldn't let me push from someone elses)
+ 1) examined file and noticed everything was separated by a semicolon, which is the delimiter
+    head PAcifici2013_data.csv
+    nano Pacifici-delim.txt
+    Ctrl-o
+    Enter
+    Ctrl-x
+    (also moved this to my repo in homework-two and then did the git push workflow shown in number 2 above)
+ 2) cat Pacifici2013_data.csv | head -n 10 | cut -d ";" -f 3
+    
+
+1) tail -5 Pacifici2013_data.csv
+   tail +2 Pacifici2013_data.csv
+2) head -n 10 Pacifici2013_data.csv | tail +2 > Pacifici-ten.txt
+3) cd ~/Developer/repos/eeb-c177-homework/class-assignments/homework-two
+   nano hw2-part3-commands.txt
+   [typed in everything]
+   Ctrl-o
+   Enter
+   Ctrl-x
+
