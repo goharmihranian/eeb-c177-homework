@@ -1,0 +1,10 @@
+tail +2 Pacifici2013_data.csv | cut -d ";" -f 2-6 | tr ";" " " | sort -r -n -k 6 > bodym.csv
+
+cd ~/Developer/repos/eeb-c177-homework/class-assignments/homework-two
+nano hw2-part5-commands.txt
+Ctril-o
+Enter
+Ctrl-x
+git add -A
+git commit -m "completed part 5"
+git push origin master
