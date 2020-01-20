@@ -1,0 +1,11 @@
+1) wget -c http://dev.shawntylerschwartz.com/docs/fish_species.txt
+   git add -A
+   git commit -m "downloaded fish file"
+   git push origin master
+2) sort fish_species.txt > fishes-sort.txt
+   sort -r fish-species.txt > fishes-rev-sort.txt
+   uniq fish_species.txt > fishes-unique.txt
+
+git add -A
+git commit -m "part 4 complete'
+git push origin master
